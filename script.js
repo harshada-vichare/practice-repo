@@ -1,4 +1,7 @@
-let a = document.querySelector("a");
-a.addEventListener("click", function () {
-  a.href = "www.google.com";
+let box = document.querySelector("#box");
+
+window.addEventListener("mousemove", function (e) {
+  console.log(e.clientX, e.clientY);
+  box.style.left = e.clientX + "px";
+  box.style.top = e.clientY + "px";
 });
