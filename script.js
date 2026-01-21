@@ -7,6 +7,7 @@ form.addEventListener("submit", function (e) {
   data.forEach(function (input) {
     if (input.value !== "") {
       console.log(input.value);
+      input.value = "";
     }
   });
 });
