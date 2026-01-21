@@ -1,7 +1,12 @@
-let box = document.querySelector("#box");
+const form = document.querySelector("form", function () {});
+const data = document.querySelectorAll("input");
 
-window.addEventListener("mousemove", function (e) {
-  console.log(e.clientX, e.clientY);
-  box.style.left = e.clientX + "px";
-  box.style.top = e.clientY + "px";
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  data.forEach(function (input) {
+    if (input.value !== "") {
+      console.log(input.value);
+    }
+  });
 });
